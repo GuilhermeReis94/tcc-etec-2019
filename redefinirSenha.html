@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+body {
+ background-image: url("images/fundo.jpg");
+ background-color: #cccccc;
+}
+</style>
+    <head>
+        <!-- modal -->
+        <title>Redefinir Senha</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<LINK REL="SHORTCUT ICON" href="images/icon.png">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+	<center>
+	<br><br><br><br><br><br><br>
+        <div class="container">
+            <h2><i>REDEFINIR SENHA</i></h2>
+			<br>
+            <!-- Botão para carregar o modal -->
+            <button type="button" class="btn btn-primary"
+                    data-toggle="modal" data-target="#modalCli">
+                Redefinir
+            </button>
+			<br><br>
+			<a href="login.html" class="btn btn-success">Login</a>
+			<br><br>
+			<a href="index.html" class="btn btn-danger">Página Inicial</a>
+            <br><br><br>
+            <img src="images/int.png" width="150" weight="150"/>
+            </center>
+    
+            <!-- Modal Cliente -->
+            <div class="modal fade" id="modalCli">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Redefina sua Senha</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class = "modal-body">
+               <form action = "redefinirSenhaTry.php" method = "post">
+                     <label>E-mail:</label>
+				<br>
+                <input type = "text" size = "40" name = "email">
+                <hr />
+                     <label>Nova Senha: </label>
+					 <br>
+                    <input type = "password" size = "40" name = "senha">
+                    <hr />
+               
+					<input type = "submit" name = "btnRedefinir" 
+						value = "Redefinir Senha">
+			   
+			   </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                            Fechar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

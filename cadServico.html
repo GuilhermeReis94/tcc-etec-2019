@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+body {
+ background-image: url("images/fundo.jpg");
+ background-color: #cccccc;
+}
+</style>
+    <head>
+        <!-- modal -->
+        <title>Painel Administrativo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<LINK REL="SHORTCUT ICON" href="images/icon.png">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+	<center>
+	<br><br><br><br><br><br><br>
+        <div class="container">
+            <h2><i>PAINEL ADMINISTRATIVO</i></h2>
+			<br>
+            <!-- Botão para carregar o modal -->
+            <button type="button" class="btn btn-primary"
+                    data-toggle="modal" data-target="#modalCli">
+                Cadastrar Serviço
+            </button>
+			<br><br>
+			<a href="index.html" class="btn btn-danger">Página Inicial</a>
+            <br><br><br>
+			<input type = "text" size = "40" name = "horarios">
+			<br><br><br>
+            <img src="images/add.png" width="150" weight="150"/>
+            </center>
+    
+            <!-- Modal Cliente -->
+            <div class="modal fade" id="modalCli">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Informações</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class = "modal-body">
+               <form action = "cadServicoTry.php" method = "post">
+				<label>Nome:</label>
+				<br>
+                <input type = "text" size = "40" name = "nome">
+                <hr />
+                <label>Valor: </label>
+				<br>
+                    <input type = "text" size = "40" name = "valor">
+                    <hr />
+               
+					<input type = "submit" name = "btnCadServico" 
+						value = "Cadastrar">
+			   
+			   </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                            Fechar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+body {
+ background-image: url("images/fundo.jpg");
+ background-color: #cccccc;
+}
+</style>
+    <head>
+        <!-- modal -->
+        <title>Cadastrar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<LINK REL="SHORTCUT ICON" href="images/icon.png">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+	<center>
+	<br><br><br><br><br><br><br>
+        <div class="container">
+            <h2><i>CADASTRO DE CLIENTES</i></h2>
+			<br>
+            <!-- Botão para carregar o modal -->
+            <button type="button" class="btn btn-primary"
+                    data-toggle="modal" data-target="#modalCli">
+                Cadastrar
+            </button>
+			<br><br>
+			<a href="login.html" class="btn btn-success">Login</a>
+			<br><br>
+			<a href="index.html" class="btn btn-danger">Página Inicial</a>
+            <br><br><br>
+            <img src="images/formu.png" width="150" weight="150"/>
+            </center>
+    
+            <!-- Modal Cliente -->
+            <div class="modal fade" id="modalCli">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Dados do Cliente</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class = "modal-body">
+               <form action = "cadastroTry.php" method = "post">
+				<label>Nome:</label>
+				<br>
+                <input type = "text" size = "40" name = "nome" placeholder="Digite seu Nome">
+                <hr />
+                <label>Telefone: </label>
+				<br>
+                    <input type = "text" size = "40" name = "telefone" placeholder="Digite seu Telefone">
+                    <hr />
+                    <label>Celular: </label>
+					<br>
+                    <input type = "text" size = "40" name = "celular" placeholder="Digite seu Celular">
+                    <hr />
+                     <label>E-mail: </label>
+					 <br>
+                    <input type = "text" size = "40" name = "email" placeholder="Digite seu E-mail">
+                    <hr />
+                     <label>Senha: </label>
+					 <br>
+                    <input type = "password" size = "40" name = "senha" placeholder="Digite sua Senha">
+                    <hr />
+               
+					<input type = "submit" name = "btnSalvar" 
+						value = "Cadastrar">
+						
+					<input type = "submit" name = "btnConsultar" 
+						value = "Consultar">
+						
+					<input type = "submit" name = "btnAlterar" 
+						value = "Alterar">
+			   
+			   </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                            Fechar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>
